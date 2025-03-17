@@ -3,14 +3,8 @@ public class App {
         
         Conta conta1 = new Conta ("624.482.444-24", 003, 15000);
         
-        conta1.mostrarDados();
+        conta1.setcpf("cpf inválido");
 
-        conta1.sacar(5000);
-
-        conta1.mostrarSaldo();
-
-        conta1.depositar(700);
-
-        conta1.mostrarSaldo();
+        System.out.println("O sistema achou o seguinte problema com seu dado: " + conta1.getcpf());
     }
 }
