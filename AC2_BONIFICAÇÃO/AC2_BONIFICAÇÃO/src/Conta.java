@@ -49,12 +49,12 @@ public class Conta{
         if (clienteEspecial){
             return saldo * 0.10;
         } else {
-            return saldo * 0.5;
+            return saldo * 0.05;
         }
     }
 
     public void transferir(Conta Destino, double valor){
-        if (valor > 0 && valor <= conta){
+        if (valor > 0 && valor <= saldo){
             this.sacar(valor);
             destino.depositar(valor);
         } 
@@ -88,7 +88,7 @@ public class Conta{
         System.out.println("Titular: " + this.cpf);
         System.out.println("Número do banco: " + this.numeroBanco);
         System.out.println("Cliente especial: " + (clienteEspecial ? "Sim" : "Não"));
-        // System.out.println("Bonificação: " + calcularBonificacao());
+        System.out.println("Bonificação: " + calcularBonificação());
         mostrarSaldo();
     }
 }
