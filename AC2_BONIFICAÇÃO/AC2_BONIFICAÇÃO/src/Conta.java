@@ -3,12 +3,14 @@ public class Conta{
     private String cpf;
     private int numeroBanco;
     private double saldo;
+    private boolean clienteEspecial;
 
     //Construtor para inicializar os valores
-    public Conta (String cpf, int numeroBanco, double saldo){
+    public Conta (String cpf, int numeroBanco, double saldo, boolean clienteEspecial){
         this.cpf = cpf;
         this.numeroBanco = numeroBanco;
         this.saldo = saldo;
+        this.clienteEspecial = clienteEspecial;
     }
 
     //Métodos Getter e Setters para acessar e modificar os atributos
@@ -43,6 +45,21 @@ public class Conta{
         this.saldo = saldo;
     }
 
+    public double calcularBonificação(){
+        if (clienteEspecial){
+            return saldo * 0.10;
+        } else {
+            return saldo * 0.5;
+        }
+    }
+
+    public void transferir(Conta Destino, double valor){
+        if (valor > 0 && valor <= conta){
+            this.sacar(valor);
+            destino.depositar(valor);
+        } 
+    }
+
     //Método para depositar somente valores positivos
     public void depositar (double valor){
         if (valor > 0){
@@ -69,8 +86,9 @@ public class Conta{
     //Método para verificar os dados da conta
     public void mostrarDados(){
         System.out.println("Titular: " + this.cpf);
-        System.out.println("Número do banco: " + numeroBanco);
+        System.out.println("Número do banco: " + this.numeroBanco);
+        System.out.println("Cliente especial: " + (clienteEspecial ? "Sim" : "Não"));
+        // System.out.println("Bonificação: " + calcularBonificacao());
         mostrarSaldo();
     }
-
 }

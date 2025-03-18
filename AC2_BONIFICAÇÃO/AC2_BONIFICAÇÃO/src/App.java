@@ -1,10 +1,11 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        Conta conta1 = new Conta ("624.482.444-24", 003, 15000);
-        
-        conta1.setcpf("cpf inválido");
+        Conta conta1 = new Conta ("624.482.444-24", 001, 15000, true);
+        Conta conta2 = new Conta ("123.456.789-10", 002, 18000, false);
 
-        System.out.println("O sistema achou o seguinte problema com seu dado: " + conta1.getcpf());
+        conta1.mostrarDados();
+        System.out.println("");
+        conta2.mostrarDados();
     }
 }
