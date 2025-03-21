@@ -1,4 +1,3 @@
-import java.io.ObjectInputFilter.Status;
 
 public class Genero{
     //implementação da classe gênero
@@ -16,6 +15,6 @@ public class Genero{
     public void dadosGenero(){
         System.out.println("Gênero: " + this.id);
         System.out.println("Descrição: " + this.descricao);
-        System.out.println(status ? "Ativo" : "Inativo");
+        System.out.println("Status: "+ (status? "Ativo" : "Inativo"));
     }
 }
