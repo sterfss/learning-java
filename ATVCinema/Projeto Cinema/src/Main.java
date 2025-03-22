@@ -11,15 +11,18 @@ public class Main {
         Ator a2 = new Ator("Ana Faris", 2);
 
         Elenco e1 = new Elenco(f1, a1, true);
-        Elenco e2 = new Elenco(f2, a1, false);
+        Elenco e2 = new Elenco(f2, a2, true);
 
-        // System.out.println("Informações do Filme:");
-        // f1.dadosFilme();
-        // System.out.println("");
-        // f2.dadosFilme();
-
+        System.out.println("Informações do Filme:");
+        f1.dadosFilme();
+        System.out.println("");
+        System.out.println("Informações do Elenco:");
         e1.dadosElenco();
         System.out.println("");
+        System.out.println("Informações do Filme:");
+        f2.dadosFilme();
+        System.out.println("");
+        System.out.println("Informações do Elenco:");
         e2.dadosElenco();
     }
 }
