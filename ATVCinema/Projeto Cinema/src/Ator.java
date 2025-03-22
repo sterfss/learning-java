@@ -1,17 +1,14 @@
 public class Ator {
     public String nome;
-    public int idade;
     public int id;
 
-    public Ator(String nome, int idade, int id){
+    public Ator(String nome, int id){
         this.nome = nome;
-        this.idade = idade;
         this.id = id;
     }
 
     public void dadosAtor(){
-        System.out.println(this.nome);
-        System.out.println(this.idade);
-        System.out.println(this.id);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Id: " + this.id);
     }
 }

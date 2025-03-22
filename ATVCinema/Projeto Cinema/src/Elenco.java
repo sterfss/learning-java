@@ -4,8 +4,13 @@ public class Elenco {
     public boolean atorPrincipal;
 
     public Elenco(Filme filme, Ator ator, boolean atorPrincipal){
-        this.filme = null;
-        this.ator = null;
-        this.atorPrincipal = false;
+        this.filme = filme;
+        this.ator = ator;
+        this.atorPrincipal = atorPrincipal;
+    }
+
+    public void dadosElenco(){
+        this.ator.dadosAtor();
+        System.out.println("Ator Principal: " + (atorPrincipal? "Sim":"Não"));
     }
 }
