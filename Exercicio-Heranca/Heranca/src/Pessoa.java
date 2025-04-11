@@ -12,6 +12,6 @@ public class Pessoa {
     }
 
     public void mostrar(){
-        System.out.println(this.cpf + "-" + this.nome);
+        System.out.println(this.cpf + " - " + this.nome);
     }
 }
