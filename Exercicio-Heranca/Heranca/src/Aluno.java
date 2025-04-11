@@ -9,4 +9,10 @@ public class Aluno extends Pessoa{
         super.mostrar();
         System.out.println(matricula);
     }
+
+    public Aluno(String cpf, String nome, int matricula){
+        super(cpf, nome);
+        this.matricula = matricula;
+
+    }
 }
