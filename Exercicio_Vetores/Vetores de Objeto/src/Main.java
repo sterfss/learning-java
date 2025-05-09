@@ -8,11 +8,10 @@ public class Main {
 
         Carrinho c = new Carrinho(5);
         c.adicionarProduto(p);
+        c.adicionarProduto(p1);
         c.adicionarProduto(p2);
+        c.adicionarProduto(p3);
         c.adicionarProduto(p4);
-        c.adicionarProduto(p);
-        c.adicionarProduto(p);
-        c.adicionarProduto(p);
 
         c.listarProdutos();
 
