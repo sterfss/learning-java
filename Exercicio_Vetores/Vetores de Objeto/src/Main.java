@@ -1,9 +1,21 @@
 public class Main {
     public static void main(String[] args) throws Exception {
-        Produto p1 =  new Produto("001", 2.5,10.5);
-        Produto p2 =  new Produto("002", 15.2, 20.5);
-        Produto p3 = new Produto("003", 3.5, 55.2);
-        
-        p1.informacoesProduto();
+        Produto p = new Produto("0", 9.0, 50.0);
+        Produto p1 = new Produto("1", 11.0, 49.0);
+        Produto p2 = new Produto("2", 9.0, 51.0);
+        Produto p3 = new Produto("3", 20.0, 40.0);
+        Produto p4 = new Produto("4", 30.0, 0.0);
+
+        Carrinho c = new Carrinho(5);
+        c.adicionarProduto(p);
+        c.adicionarProduto(p1);
+        c.adicionarProduto(p2);
+        c.adicionarProduto(p3);
+        c.adicionarProduto(p4);
+
+        c.listarProdutos();
+
+        System.out.println(c.qtdPesoMaior10ValorMenor50());
+
     }
 }
