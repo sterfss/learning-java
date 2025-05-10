@@ -2,9 +2,14 @@ public class Account{
     private Client client;
     private double balance;
 
+    public void showAccountData(){
+        client.printClientData();
+        System.out.println("Balance: " + balance + " R$");
+    }
+
     //Constructor to instance objects type Client in class Main
-    public Account(Client client, double saldoInicial){
-        if(saldoInicial < 0) {
+    public Account(Client client, double balance){
+        if(balance < 0) {
             throw new IllegalArgumentException("Balance can not be negative");
         }
         this.client = client;

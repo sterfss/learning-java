@@ -10,7 +10,7 @@ public class Client{
     }
 
     public void printClientData(){
-        System.out.println("Nome: " + name);
+        System.out.println("Name: " + name);
         System.out.println("CPF: " + cpf);
         System.out.println("Address: " + address);
     }
