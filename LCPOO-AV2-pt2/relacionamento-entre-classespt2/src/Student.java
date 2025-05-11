@@ -1,14 +1,19 @@
 public class Student{
     private String name;
-    private String yOfbirth;
+    private int yOfbirth;
     private double globalAverage;
 
-    public Student(String name, String yOfbirth, double globalAverage){
+  @Override
+    public String toString() {
+    return "Nome: " + name + ", Ano de nascimento: " + yOfbirth + ", Média global: " + globalAverage;
+}
+
+    public Student(String name, int yOfbirth, double globalAverage){
         this.name = name;
         this.yOfbirth = yOfbirth;
         this.globalAverage = globalAverage;
     }
-    public void studentData(){
+    public void printStudentData(){
         System.out.println(name);
         System.out.println(yOfbirth);
         System.out.println(globalAverage);
@@ -19,10 +24,10 @@ public class Student{
     public String getName(){
         return name;
     }
-    public void setYofBirth(String yOfbirth){
+    public void setYofBirth(int yOfbirth){
         this.yOfbirth = yOfbirth;
     }
-    public String getYofBirth(){
+    public int getYofBirth(){
         return yOfbirth;
     }
     public void setGlobalAverage(double globalAverage){
