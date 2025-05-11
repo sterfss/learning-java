@@ -23,5 +23,17 @@ public class Class {
     public List<Student> getStudents(){
         return students;
     }
+
+    public Student getBiggestAverage(){
+        if(students.isEmpty()) return null;
+
+        Student BestStudent = students.get(0);
+        for (Student a: students){
+            if(a.getGlobalAverage() > BestStudent.getGlobalAverage()){
+                BestStudent = a;
+            }
+        }
+        return BestStudent;
+    }
 }
 
