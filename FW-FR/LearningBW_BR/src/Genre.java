@@ -11,6 +11,10 @@ public class Genre{
     private String genreDesc;
 
 //Genre constructor
+    public Genre(){
+        this.genreId = 0;
+        this.genreDesc = "";
+    }    
     public Genre(int genreId, String genreDesc){
         this.genreId = genreId;
         this.genreDesc = genreDesc;
@@ -38,7 +42,6 @@ public class Genre{
             writer.newLine();
             writer.write("Description: " + getGenreDesc());
             writer.newLine();
-            writer.write("----------------------");
         } catch (IOException e) {
             System.out.println("Error writing to file");
         }
@@ -57,6 +60,8 @@ public class Genre{
             //EN-US> We create a variable as a temporary storage to hold each line of text read from a file during 
             //the reading process
             String line;
+            //PT-BR> Aqui usamos uma estrutura de: enquanto o que estiver na linha for diferente de vazio, printe a linha
+            //EN-US> Here, we use a structure that prints each line as long as the content is not empty.
             while((line = reader.readLine()) != null){
                 System.out.println(line);
             }
