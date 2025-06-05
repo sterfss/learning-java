@@ -5,6 +5,7 @@ public class Consumo {
     private Produto produto;
     private Reserva reserva;
     private double quantidade;
+    public static final String CAMINHO_ARQUIVO = "C:\\Users\\sterf\\OneDrive\\Área de Trabalho\\estudosjava\\learning-java\\TrabalhoPOO_05-06\\TrabalhoPOO\\src\\data\\Consumo.txt";
 
     public Consumo(int idConsumo, Produto produto, Reserva reserva, double quantidade) {
         this.idConsumo = idConsumo;

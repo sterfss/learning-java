@@ -58,18 +58,30 @@ public class Funcionario extends Pessoa {
         writer.newLine();
         writer.close();
         System.out.println("Funcionário cadastrado com sucesso!");
-
     }
 
     public static void listar() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(CAMINHO_ARQUIVO));
         String linha;
+        boolean temDados = false;
+
         while ((linha = reader.readLine()) != null) {
-            Funcionario f = fromString(linha);
-            f.mostrar();
-            System.out.println("-------------------------");
+            try {
+                Funcionario f = fromString(linha);
+                f.mostrar();
+                temDados = true;
+                System.out.println("-------------------------");
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Linha em branco ou mal formatada encontrada no arquivo");
+                System.out.println(linha);
+
+            }
         }
         reader.close();
+
+        if (!temDados) {
+            System.out.println("Nenhum dado válido encontrado para exibir");
+        }
     }
 
     public static void editar(Scanner sc) throws IOException {
@@ -107,5 +119,30 @@ public class Funcionario extends Pessoa {
         } else {
             System.out.println("CPF não encontrado.");
         }
+    }
+
+    public static void consultar(Scanner sc) throws IOException {
+        System.out.println("Digite o cpf a ser consultado: ");
+        String cpfConsultado = sc.nextLine();
+
+        BufferedReader reader = new BufferedReader(new FileReader(CAMINHO_ARQUIVO));
+        String linha;
+        boolean encontrado = false;
+
+        while ((linha = reader.readLine()) != null) {
+            Funcionario f = fromString(linha);
+            if (f.getCpf().equals(cpfConsultado)) {
+                System.out.println("Funcionário encontrado!");
+                f.mostrar();
+                encontrado = true;
+                break;
+            }
+        }
+        reader.close();
+
+        if (!encontrado) {
+            System.out.println("CPF não encontrado");
+        }
+
     }
 }

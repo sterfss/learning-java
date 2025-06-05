@@ -3,6 +3,7 @@ package entidades;
 public class Hospede extends Pessoa {
     private String rg;
     private boolean fidelidade;
+    public static final String CAMINHO_ARQUIVO = "C:\\Users\\sterf\\OneDrive\\Área de Trabalho\\estudosjava\\learning-java\\TrabalhoPOO_05-06\\TrabalhoPOO\\src\\data\\Hospede.txt";
 
     public Hospede(String cpf, String nome, int idade, String rg, boolean fidelidade) {
         super(cpf, nome, idade);

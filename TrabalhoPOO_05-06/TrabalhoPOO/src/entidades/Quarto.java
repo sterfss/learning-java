@@ -3,10 +3,12 @@ package entidades;
 public class Quarto {
     private int idQuarto;
     private String descQuarto;
+    public static final String CAMINHO_ARQUIVO = "C:\\Users\\sterf\\OneDrive\\Área de Trabalho\\estudosjava\\learning-java\\TrabalhoPOO_05-06\\TrabalhoPOO\\src\\data\\Quarto.txt";
 
     public Quarto(int idQuarto, String descQuarto) {
         this.idQuarto = idQuarto;
         this.descQuarto = descQuarto;
+        
     }
 
     public void mostrar() {

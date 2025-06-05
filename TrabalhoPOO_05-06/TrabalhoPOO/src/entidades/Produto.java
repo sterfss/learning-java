@@ -4,6 +4,8 @@ public class Produto {
     private int idProduto;
     private String descProduto;
     private double valor;
+    public static final String CAMINHO_ARQUIVO = "C:\\Users\\sterf\\OneDrive\\Área de Trabalho\\estudosjava\\learning-java\\TrabalhoPOO_05-06\\TrabalhoPOO\\src\\data\\Produto.txt";
+
 
     public Produto(int idProduto, String descProduto, double valor) {
         this.idProduto = idProduto;

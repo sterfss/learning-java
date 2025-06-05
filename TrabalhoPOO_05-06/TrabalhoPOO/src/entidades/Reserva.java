@@ -9,6 +9,7 @@ public class Reserva {
     private boolean checkOut;
     private Quarto quarto;
     private Hospede hospede;
+    public static final String CAMINHO_ARQUIVO = "C:\\Users\\sterf\\OneDrive\\Área de Trabalho\\estudosjava\\learning-java\\TrabalhoPOO_05-06\\TrabalhoPOO\\src\\data\\Reserva.txt";
 
     public Reserva(int idReserva, double valor, String dataEntrada, String dataSaida, boolean checkIn, boolean checkOut,
             Quarto quarto, Hospede hospede) {
